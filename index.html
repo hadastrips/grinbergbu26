@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דשבורד טיול בולגריה</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #2E7D32; /* ירוק יער בנסקו */
+            --primary-turquoise: #0097A7; /* טורקיז אגמים */
+            --primary-brown: #795548; /* חום הרים ובקתות */
+            --soft-green: #E8F5E9;
+            --soft-turquoise: #E0F7FA;
+            --bg-color: #ffffff;
+            --text-main: #333333;
+        }
+
+        /* מרכוז מלא למחשב */
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f4f6f5;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* קונטיינר האפליקציה */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-turquoise);
+            margin: 0 auto 15px auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* כפתורים מהירים */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: var(--primary-green);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-turquoise { background-color: var(--primary-turquoise); }
+        .btn-brown { background-color: var(--primary-brown); }
+
+        /* כרטיסיות ימים */
+        .day-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px 15px;
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+            border-top: 6px solid var(--primary-green);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--soft-green);
+            padding-bottom: 8px;
+        }
+
+        .day-title {
+            color: var(--primary-brown);
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* חלוניות מתקפלות חכמות */
+        details {
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        details[open] {
+            border-color: var(--primary-turquoise);
+        }
+
+        summary {
+            padding: 15px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-brown);
+            background-color: #fafdfd;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '\f107'; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-turquoise);
+        }
+        details[open] summary::after { content: '\f106'; }
+
+        .details-content {
+            padding: 15px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 12px;
+        }
+
+        .info-row i {
+            color: var(--primary-turquoise);
+            width: 20px;
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        .info-row a {
+            color: var(--primary-green);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        
+        .whatsapp-link {
+             color: #25D366 !important;
+             font-weight: bold;
+        }
+
+        /* קופסאות מידע בתוך הלו"ז */
+        .info-box-inline {
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        /* טבלה */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        th {
+            background-color: var(--primary-brown);
+            color: white;
+            padding: 12px;
+            text-align: right;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fbfc;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+            border-top: 1px solid #eee;
+            margin-top: 25px;
+            background-color: #fafafa;
+            border-radius: 10px;
+        }
+
+        .footer strong {
+            color: var(--primary-brown);
+            font-size: 14px;
+            display: block;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+        <img src="1.jpg" alt="Logo" class="logo" onerror="if (this.src != '1.JPG') this.src = '1.JPG';">
+        
+        <h1 style="text-align: center !important; width: 100% !important; margin: 0 auto 15px auto !important; display: block !important; color: var(--primary-brown); font-size: 26px;">טיול משפחת גרינברג לבולגריה | אב תשפ"ו</h1>
+        
+        <div class="quick-links">
+            <a href="#" class="btn btn-turquoise"><i class="fa-solid fa-cloud-sun"></i> מזג אוויר בנסקו</a>
+            <a href="#" class="btn btn-green"><i class="fa-solid fa-map-location-dot"></i> המפה שלכם</a>
+            <a href="#" class="btn btn-brown"><i class="fa-solid fa-house"></i> הדירה בבנסקו</a>
+        </div>
+        <div class="quick-links">
+            <a href="#" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-star-of-david"></i> כשרות חב"ד</a>
+            <a href="#" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-synagogue"></i> ביכ"נ שאטו בנסקו</a>
+        </div>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2 class="day-title">יום ראשון – נחיתה והתאקלמות</h2>
+        </div>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-turquoise);">
+            <i class="fa-solid fa-plane-arrival"></i> <strong>12:00:</strong> נחיתה בשדה התעופה של סופיה.<br>
+            <i class="fa-solid fa-car-side"></i> <strong>14:00:</strong> יציאה לדרך לכיוון ההרים!
+        </div>
+
+        <details>
+            <summary>15:30 | פארק Bachinovo</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-tree"></i><div><strong>פעילות:</strong> עצירה לפיקניק מפנק בטבע ומתיחת רגליים.</div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-brown);">
+            <i class="fa-solid fa-house-chimney"></i> <strong>17:30:</strong> הגעה לדירה ברזלוג / בנסקו והתארגנות.
+        </div>
+
+        <details>
+            <summary>18:00 | קניות והשלמות</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-cart-shopping"></i><div>קניות בסופרמרקט Lidl Razlog.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>19:00 | תצפית רזלוג (אופציונלי)</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-binoculars"></i><div>נקודת תצפית רזלוג - דרך מושלמת לסיים את היום מול הנוף.</div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="margin-bottom: 0;">
+            <i class="fa-solid fa-moon"></i> <strong>21:00:</strong> לילה טוב!
+        </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card" style="border-top-color: var(--primary-turquoise);">
+        <div class="day-header">
+            <h2 class="day-title">יום שני – אדרנלין ונופים</h2>
+        </div>
+
+        <details>
+            <summary>10:30 | טרקטורונים ב-Не се отказвай</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-truck-monster"></i><div>חוויית אקסטרים בשטח! מומלץ לתאם מראש.</div></div>
+                <div class="info-row"><i class="fa-solid fa-shekel-sign"></i><div>החל מ-120₪ לחצי שעה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>12:00 | מעיינות דוברינישטה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-water"></i><div>ביקור וטבילה במעיינות החמים והמרגיעים.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>13:00 - 16:00 | רכבל ואגם בזבוג</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-cable-car"></i><div><strong>13:00:</strong> עלייה ברכבל לאגם (כ-70₪ לאדם).</div></div>
+                <div class="info-row"><i class="fa-solid fa-basket-shopping"></i><div><strong>13:45:</strong> פיקניק ארוחת צהריים מול אגם בזבוג המרהיב.</div></div>
+                <div class="info-row"><i class="fa-solid fa-arrow-down"></i><div><strong>16:00:</strong> ירידה ברכבל חזרה.</div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-green); margin-bottom: 0;">
+            <i class="fa-solid fa-person-walking"></i> <strong>17:00:</strong> טיול קליל בבנסקו (אופציונלי).<br>
+            <i class="fa-solid fa-utensils"></i> <strong>19:00:</strong> ארוחת ערב בדירה.<br>
+            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
+        </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card" style="border-top-color: var(--primary-turquoise);">
+        <div class="day-header">
+            <h2 class="day-title">יום שלישי – מים ורפטינג</h2>
+        </div>
+
+        <details>
+            <summary>10:30 | אקווה פארק (אופציונלי)</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-water-ladder"></i><div>כיף והתרעננות ב-Banderishka Poliana.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>14:00 | רפטינג בנהר סטרומה!</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-ship"></i><div>רפטינג סוער דרך חברת Reflip. כ-2.5 שעות במים. חובה לתאם מראש!</div></div>
+                <div class="info-row"><i class="fa-solid fa-euro-sign"></i><div>40€ לאדם.</div></div>
+                <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>לתיאום:</strong> <a href="https://wa.me/" target="_blank" class="whatsapp-link">שלחו הודעה בוואטסאפ</a></div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="margin-bottom: 0;">
+            <i class="fa-solid fa-house"></i> <strong>19:00:</strong> חזרה לדירה, התאוששות וארוחת ערב.<br>
+            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
+        </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card" style="border-top-color: var(--primary-green);">
+        <div class="day-header">
+            <h2 class="day-title">יום רביעי – טבע וחיות</h2>
+        </div>
+
+        <details>
+            <summary>10:30 | Rila Fun Park</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-face-smile-wink"></i><div>מגלשות הרים ונדנדת אקסטרים!</div></div>
+                <div class="info-row"><i class="fa-solid fa-tag"></i><div>10 לבה למגלשה | 12 לבה לנדנדה (עד 110 ק"ג).</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>13:00 | פארק הדובים Belitsa (אופציונלי)</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-paw"></i><div>ביקור בשמורת הדובים (כניסה כ-5 יורו).</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>14:00 | אגם Rila Fish</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-fish"></i><div>ארוחת צהריים / דיג במקום (אופציונלי, כניסה חופשית).</div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-brown); margin-bottom: 0;">
+            <i class="fa-solid fa-person-hiking"></i> <strong>16:00:</strong> סיור קליל בשביל היער בנסקו.<br>
+            <i class="fa-solid fa-house"></i> <strong>19:00:</strong> חזרה לדירה.<br>
+            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
+        </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card" style="border-top-color: var(--primary-brown);">
+        <div class="day-header">
+            <h2 class="day-title">יום חמישי – סופיה ושופינג רגוע</h2>
+        </div>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-turquoise);">
+            <i class="fa-solid fa-car"></i> <strong>11:00:</strong> יציאה לכיוון סופיה.<br>
+            <i class="fa-solid fa-city"></i> <strong>13:00:</strong> הגעה לעיר הבירה.
+        </div>
+
+        <details>
+            <summary>15:00 | זמן שופינג!</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-bag-shopping"></i><div>קניות ב-The Mall Sofia או Paradise Center.</div></div>
+            </div>
+        </details>
+
+        <div class="info-box-inline" style="border-right: 4px solid var(--primary-green); margin-bottom: 0;">
+            <i class="fa-solid fa-utensils"></i> <strong>19:00:</strong> מסעדה כשרה / ארוחת ערב.<br>
+            <i class="fa-solid fa-bed"></i> <strong>21:00:</strong> לילה טוב בדירה ליד השדה.
+        </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-card" style="border-top-color: var(--primary-turquoise);">
+        <div class="day-header">
+            <h2 class="day-title">יום שישי – חזרה הביתה</h2>
+        </div>
+        <div class="info-box-inline" style="margin-bottom: 0;">
+            <i class="fa-solid fa-plane-departure"></i> <strong>03:00:</strong> יציאה לשדה התעופה של סופיה.<br>
+            <i class="fa-solid fa-home"></i> <strong>06:45:</strong> טיסה לישראל - חוזרים הביתה בשמחה!
+        </div>
+    </div>
+
+    <!-- Option B -->
+    <div class="day-card" style="background-color: #fcfdfe; border-top-color: #ff9800;">
+        <div class="day-header">
+            <h2 class="day-title" style="color: #e65100;">אופציה ב' - מסלול שבעת האגמים</h2>
+        </div>
+        
+        <details>
+            <summary style="color: #e65100;">יום 3 | טרק שבעת האגמים</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div><strong>07:30:</strong> לצאת לדרך, נסיעה של כשעתיים ורבע. עליה ברכבל שבעת האגמים (כ-65₪ לאחד).</div></div>
+                <div class="info-row"><i class="fa-solid fa-mountain" style="color:#ff9800"></i><div><strong>10:00 - 16:00:</strong> הליכה במסלול האדום עד אגם מס' 5 (אפשר עד 7 וחזרה). ארוחת צהריים בשטח.</div></div>
+                <div class="info-row"><i class="fa-solid fa-circle-exclamation" style="color:#ff9800"></i><div><strong>חשוב!</strong> לבדוק בתחילת המסלול שעת ירידה אחרונה ברכבל. למיטיבי לכת: המשך למסלול הצהוב (כ-3 שעות).</div></div>
+                <div class="info-row"><i class="fa-solid fa-house" style="color:#ff9800"></i><div><strong>18:30:</strong> חזרה לדירה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary style="color: #e65100;">יום 5 | רפטינג + שופינג</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-water" style="color:#ff9800"></i><div><strong>09:30:</strong> רפטינג ב-Reflip בנהר סטרומה (40€, 2.5 שעות).</div></div>
+                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div><strong>12:30:</strong> יציאה לסופיה.</div></div>
+                <div class="info-row"><i class="fa-solid fa-bag-shopping" style="color:#ff9800"></i><div><strong>15:30 - 18:30:</strong> קניון.</div></div>
+                <div class="info-row"><i class="fa-solid fa-utensils" style="color:#ff9800"></i><div>מסעדה כשרה / ארוחת ערב.</div></div>
+            </div>
+        </details>
+    </div>
+
+    <!-- Costs & Summary -->
+    <div class="day-card" style="border-top-color: var(--primary-brown);">
+        <div class="day-header">
+            <h2 class="day-title">טבלת עלויות אטרקציות (ל-5 נפשות)</h2>
+        </div>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>אטרקציה</th>
+                        <th>מחיר לאדם</th>
+                        <th>סה"כ ל-5</th>
+                        <th>הערות</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>טרקטורונים</td><td>כ-120 ₪</td><td>כ-600 ₪</td><td>חצי שעה, תיאום מראש</td></tr>
+                    <tr><td>רכבל לאגם בזבוג</td><td>כ-70 ₪</td><td>כ-350 ₪</td><td>כולל עלייה וירידה</td></tr>
+                    <tr><td>רפטינג</td><td>כ-160 ₪ (40€)</td><td>כ-800 ₪</td><td>כ-2.5 שעות, חובה תיאום</td></tr>
+                    <tr><td>אקווה פארק (אופציונלי)</td><td>40-60 ₪</td><td>200-300 ₪</td><td>תלוי עונה</td></tr>
+                    <tr><td>מגלשות / נדנדה</td><td>כ-85 ₪</td><td>כ-425 ₪</td><td>עד 110 ק"ג</td></tr>
+                    <tr><td>פארק הדובים (אופציונלי)</td><td>כ-20 ₪ (5€)</td><td>כ-100 ₪</td><td>אופציונלי</td></tr>
+                    <tr><td>שבעת האגמים (אופציונלי)</td><td>65 ₪</td><td>כ-325 ₪</td><td>כולל רכבל</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="background-color: #fffde7; border-right: 4px solid #fbc02d; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 14px;">
+            <strong style="color: #f57f17; font-size: 15px;"><i class="fa-solid fa-lightbulb"></i> טיפים חשובים:</strong>
+            <ul style="margin-top: 5px; padding-right: 20px; color: #555;">
+                <li><strong>להזמין מראש:</strong> טרקטורונים | רפטינג</li>
+                <li><strong>להביא:</strong> נעלי הליכה, בגדי ים, מים, קרם הגנה</li>
+                <li><strong>לשמור עותק בנייד:</strong> לשימוש נוח בשטח</li>
+            </ul>
+            <div style="text-align: center; margin-top: 10px; font-weight: bold; color: var(--primary-green);">שיהיה טיול מלא חוויות, טבע, צחוק וזיכרונות טובים!</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <strong>כל הזכויות שמורות להדס טרכטר - יועצת טיולים בארץ ובעולם 050-5685356</strong>
+        אין להעביר ללא אישור מפורש. העובר על כך עובר על גזל לפי דין תורה וחוקי המקום.
+    </div>
+
+</div>
+
+</body>
+</html>
