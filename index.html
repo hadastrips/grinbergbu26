@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דשבורד טיול בולגריה</title>
+    <title>לוז טיול בולגריה</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -17,7 +17,6 @@
             --text-main: #333333;
         }
 
-        /* מרכוז מלא למחשב */
         body {
             font-family: 'Assistant', sans-serif;
             background-color: #f4f6f5;
@@ -28,7 +27,6 @@
             justify-content: center;
         }
 
-        /* קונטיינר האפליקציה */
         .container {
             width: 100%;
             max-width: 500px;
@@ -39,7 +37,6 @@
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
         }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 25px;
@@ -56,7 +53,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* כפתורים מהירים */
         .quick-links {
             display: flex;
             flex-wrap: wrap;
@@ -82,7 +78,6 @@
         .btn-turquoise { background-color: var(--primary-turquoise); }
         .btn-brown { background-color: var(--primary-brown); }
 
-        /* כרטיסיות ימים */
         .day-card {
             background-color: #ffffff;
             border-radius: 15px;
@@ -109,7 +104,6 @@
             font-weight: 700;
         }
 
-        /* חלוניות מתקפלות חכמות */
         details {
             background-color: #fff;
             border: 1px solid #f0f0f0;
@@ -175,7 +169,6 @@
              font-weight: bold;
         }
 
-        /* קופסאות מידע בתוך הלו"ז */
         .info-box-inline {
             background-color: #fafafa;
             border: 1px solid #eee;
@@ -185,7 +178,6 @@
             font-size: 14px;
         }
 
-        /* טבלה */
         .table-wrapper {
             overflow-x: auto;
             margin-top: 15px;
@@ -214,7 +206,6 @@
             background-color: #f9fbfc;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 25px 15px;
@@ -246,13 +237,12 @@
         <h1 style="text-align: center !important; width: 100% !important; margin: 0 auto 15px auto !important; display: block !important; color: var(--primary-brown); font-size: 26px;">טיול משפחת גרינברג לבולגריה | אב תשפ"ו</h1>
         
         <div class="quick-links">
-            <a href="#" class="btn btn-turquoise"><i class="fa-solid fa-cloud-sun"></i> מזג אוויר בנסקו</a>
-            <a href="#" class="btn btn-green"><i class="fa-solid fa-map-location-dot"></i> המפה שלכם</a>
-            <a href="#" class="btn btn-brown"><i class="fa-solid fa-house"></i> הדירה בבנסקו</a>
+            <a href="https://www.accuweather.com/he/bg/bansko/43310/weather-forecast/43310" target="_blank" class="btn btn-turquoise"><i class="fa-solid fa-cloud-sun"></i> תחזית בנסקו</a>
+            <a href="https://www.google.com/maps" target="_blank" class="btn"><i class="fa-solid fa-map-location-dot"></i> המפה שלכם</a>
         </div>
         <div class="quick-links">
-            <a href="#" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-star-of-david"></i> כשרות חב"ד</a>
-            <a href="#" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-synagogue"></i> ביכ"נ שאטו בנסקו</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Chabad+Balkans+Sofia" target="_blank" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-star-of-david"></i> כשרות חב"ד</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Chateau+Bansko+Hotel" target="_blank" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-synagogue"></i> ביכ"נ שאטו בנסקו</a>
         </div>
     </div>
 
@@ -271,6 +261,7 @@
             <summary>15:30 | פארק Bachinovo</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-tree"></i><div><strong>פעילות:</strong> עצירה לפיקניק מפנק בטבע ומתיחת רגליים.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Park+Bachinovo+Blagoevgrad" target="_blank">ניווט לפארק</a></div></div>
             </div>
         </details>
 
@@ -281,7 +272,8 @@
         <details>
             <summary>18:00 | קניות והשלמות</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-cart-shopping"></i><div>קניות בסופרמרקט Lidl Razlog.</div></div>
+                <div class="info-row"><i class="fa-solid fa-cart-shopping"></i><div>קניות בסופרמרקט Lidl.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Lidl+Razlog" target="_blank">ניווט ל-Lidl Razlog</a></div></div>
             </div>
         </details>
 
@@ -289,6 +281,7 @@
             <summary>19:00 | תצפית רזלוג (אופציונלי)</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-binoculars"></i><div>נקודת תצפית רזלוג - דרך מושלמת לסיים את היום מול הנוף.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Razlog+viewpoint" target="_blank">ניווט לתצפית</a></div></div>
             </div>
         </details>
 
@@ -306,8 +299,8 @@
         <details>
             <summary>10:30 | טרקטורונים ב-Не се отказвай</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-truck-monster"></i><div>חוויית אקסטרים בשטח! מומלץ לתאם מראש.</div></div>
-                <div class="info-row"><i class="fa-solid fa-shekel-sign"></i><div>החל מ-120₪ לחצי שעה.</div></div>
+                <div class="info-row"><i class="fa-solid fa-truck-monster"></i><div>חוויית אקסטרים בשטח! (החל מ-120₪ לחצי שעה). מומלץ לתאם מראש.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=ATV+Bansko+Не+се+отказвай" target="_blank">ניווט לטרקטורונים</a></div></div>
             </div>
         </details>
 
@@ -315,6 +308,7 @@
             <summary>12:00 | מעיינות דוברינישטה</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-water"></i><div>ביקור וטבילה במעיינות החמים והמרגיעים.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Dobrinishte+mineral+baths" target="_blank">ניווט למעיינות</a></div></div>
             </div>
         </details>
 
@@ -323,6 +317,7 @@
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-cable-car"></i><div><strong>13:00:</strong> עלייה ברכבל לאגם (כ-70₪ לאדם).</div></div>
                 <div class="info-row"><i class="fa-solid fa-basket-shopping"></i><div><strong>13:45:</strong> פיקניק ארוחת צהריים מול אגם בזבוג המרהיב.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Bezbog+Lake" target="_blank">ניווט לאגם בזבוג</a></div></div>
                 <div class="info-row"><i class="fa-solid fa-arrow-down"></i><div><strong>16:00:</strong> ירידה ברכבל חזרה.</div></div>
             </div>
         </details>
@@ -344,15 +339,17 @@
             <summary>10:30 | אקווה פארק (אופציונלי)</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-water-ladder"></i><div>כיף והתרעננות ב-Banderishka Poliana.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Banderishka+Poliana" target="_blank">ניווט לפארק מים</a></div></div>
             </div>
         </details>
 
         <details>
             <summary>14:00 | רפטינג בנהר סטרומה!</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-ship"></i><div>רפטינג סוער דרך חברת Reflip. כ-2.5 שעות במים. חובה לתאם מראש!</div></div>
+                <div class="info-row"><i class="fa-solid fa-ship"></i><div>רפטינג סוער ב-Reflip. כ-2.5 שעות במים. חובה לתאם מראש!</div></div>
                 <div class="info-row"><i class="fa-solid fa-euro-sign"></i><div>40€ לאדם.</div></div>
                 <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>לתיאום:</strong> <a href="https://wa.me/" target="_blank" class="whatsapp-link">שלחו הודעה בוואטסאפ</a></div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Reflip+Rafting+Struma" target="_blank">ניווט לרפטינג</a></div></div>
             </div>
         </details>
 
@@ -371,8 +368,8 @@
         <details>
             <summary>10:30 | Rila Fun Park</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-face-smile-wink"></i><div>מגלשות הרים ונדנדת אקסטרים!</div></div>
-                <div class="info-row"><i class="fa-solid fa-tag"></i><div>10 לבה למגלשה | 12 לבה לנדנדה (עד 110 ק"ג).</div></div>
+                <div class="info-row"><i class="fa-solid fa-face-smile-wink"></i><div>מגלשות הרים ונדנדת אקסטרים! (10 לבה למגלשה | 12 לבה לנדנדה, עד 110 ק"ג).</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Rila+Fun+Park" target="_blank">ניווט לפארק המגלשות</a></div></div>
             </div>
         </details>
 
@@ -380,18 +377,20 @@
             <summary>13:00 | פארק הדובים Belitsa (אופציונלי)</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-paw"></i><div>ביקור בשמורת הדובים (כניסה כ-5 יורו).</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Dancing+Bears+Park+Belitsa" target="_blank">ניווט לפארק הדובים</a></div></div>
             </div>
         </details>
 
         <details>
             <summary>14:00 | אגם Rila Fish</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-fish"></i><div>ארוחת צהריים / דיג במקום (אופציונלי, כניסה חופשית).</div></div>
+                <div class="info-row"><i class="fa-solid fa-fish"></i><div>פיקניק ארוחת צהריים / דיג במקום (אופציונלי, כניסה חופשית).</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Rila+Fish" target="_blank">ניווט לאגם הדגים</a></div></div>
             </div>
         </details>
 
         <div class="info-box-inline" style="border-right: 4px solid var(--primary-brown); margin-bottom: 0;">
-            <i class="fa-solid fa-person-hiking"></i> <strong>16:00:</strong> סיור קליל בשביל היער בנסקו.<br>
+            <i class="fa-solid fa-person-hiking"></i> <strong>16:00:</strong> סיור קליל ב<a href="https://www.google.com/maps/search/?api=1&query=Bansko+forest+trail" target="_blank">שביל היער בנסקו</a>.<br>
             <i class="fa-solid fa-house"></i> <strong>19:00:</strong> חזרה לדירה.<br>
             <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
         </div>
@@ -412,6 +411,7 @@
             <summary>15:00 | זמן שופינג!</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-bag-shopping"></i><div>קניות ב-The Mall Sofia או Paradise Center.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=The+Mall+Sofia" target="_blank">ניווט ל-The Mall</a> | <a href="https://www.google.com/maps/search/?api=1&query=Paradise+Center+Sofia" target="_blank">ניווט ל-Paradise</a></div></div>
             </div>
         </details>
 
@@ -444,6 +444,7 @@
                 <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div><strong>07:30:</strong> לצאת לדרך, נסיעה של כשעתיים ורבע. עליה ברכבל שבעת האגמים (כ-65₪ לאחד).</div></div>
                 <div class="info-row"><i class="fa-solid fa-mountain" style="color:#ff9800"></i><div><strong>10:00 - 16:00:</strong> הליכה במסלול האדום עד אגם מס' 5 (אפשר עד 7 וחזרה). ארוחת צהריים בשטח.</div></div>
                 <div class="info-row"><i class="fa-solid fa-circle-exclamation" style="color:#ff9800"></i><div><strong>חשוב!</strong> לבדוק בתחילת המסלול שעת ירידה אחרונה ברכבל. למיטיבי לכת: המשך למסלול הצהוב (כ-3 שעות).</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot" style="color:#ff9800"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Seven+Rila+Lakes+Cable+Car" target="_blank" style="color: #e65100;">ניווט לרכבל האגמים</a></div></div>
                 <div class="info-row"><i class="fa-solid fa-house" style="color:#ff9800"></i><div><strong>18:30:</strong> חזרה לדירה.</div></div>
             </div>
         </details>
