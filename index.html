@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>לוז טיול בולגריה</title>
+    <title>דשבורד טיול בולגריה</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-green: #2E7D32; /* ירוק יער בנסקו */
-            --primary-turquoise: #0097A7; /* טורקיז אגמים */
-            --primary-brown: #795548; /* חום הרים ובקתות */
+            --primary-green: #2E7D32; 
+            --primary-turquoise: #0097A7; 
+            --primary-brown: #795548; 
             --soft-green: #E8F5E9;
             --soft-turquoise: #E0F7FA;
             --bg-color: #ffffff;
@@ -169,15 +169,6 @@
              font-weight: bold;
         }
 
-        .info-box-inline {
-            background-color: #fafafa;
-            border: 1px solid #eee;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
         .table-wrapper {
             overflow-x: auto;
             margin-top: 15px;
@@ -237,8 +228,9 @@
         <h1 style="text-align: center !important; width: 100% !important; margin: 0 auto 15px auto !important; display: block !important; color: var(--primary-brown); font-size: 26px;">טיול משפחת גרינברג לבולגריה | אב תשפ"ו</h1>
         
         <div class="quick-links">
-            <a href="https://www.accuweather.com/he/bg/bansko/43310/weather-forecast/43310" target="_blank" class="btn btn-turquoise"><i class="fa-solid fa-cloud-sun"></i> תחזית בנסקו</a>
-            <a href="https://www.google.com/maps" target="_blank" class="btn"><i class="fa-solid fa-map-location-dot"></i> המפה שלכם</a>
+            <a href="https://www.accuweather.com/he/bg/bansko/43310/weather-forecast/43310" target="_blank" class="btn btn-turquoise"><i class="fa-solid fa-cloud-sun"></i> מזג אוויר בנסקו</a>
+            <a href="https://maps.app.goo.gl/PnfupLU82mGLQH1z5" target="_blank" class="btn"><i class="fa-solid fa-map-location-dot"></i> המפה שלכם</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=41.8265864,23.488446" target="_blank" class="btn btn-brown"><i class="fa-solid fa-house"></i> הדירה בבנסקו</a>
         </div>
         <div class="quick-links">
             <a href="https://www.google.com/maps/search/?api=1&query=Chabad+Balkans+Sofia" target="_blank" class="btn btn-brown" style="background-color: #5D4037;"><i class="fa-solid fa-star-of-david"></i> כשרות חב"ד</a>
@@ -252,27 +244,41 @@
             <h2 class="day-title">יום ראשון – נחיתה והתאקלמות</h2>
         </div>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-turquoise);">
-            <i class="fa-solid fa-plane-arrival"></i> <strong>12:00:</strong> נחיתה בשדה התעופה של סופיה.<br>
-            <i class="fa-solid fa-car-side"></i> <strong>14:00:</strong> יציאה לדרך לכיוון ההרים!
-        </div>
+        <details>
+            <summary>12:00 | נחיתה בסופיה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-plane-arrival"></i><div>נחיתה בשדה התעופה של סופיה ואיסוף כבודה.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Sofia+Airport" target="_blank">ניווט לשדה התעופה סופיה</a></div></div>
+            </div>
+        </details>
 
         <details>
-            <summary>15:30 | פארק Bachinovo</summary>
+            <summary>14:00 | יציאה לדרך</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-tree"></i><div><strong>פעילות:</strong> עצירה לפיקניק מפנק בטבע ומתיחת רגליים.</div></div>
+                <div class="info-row"><i class="fa-solid fa-car-side"></i><div>איסוף הרכב השכור ויציאה לכיוון ההרים בבנסקו.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>15:30 | פיקניק בפארק Bachinovo</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-tree"></i><div>עצירה בדרך לפיקניק מפנק בטבע ומתיחת רגליים.</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Park+Bachinovo+Blagoevgrad" target="_blank">ניווט לפארק</a></div></div>
             </div>
         </details>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-brown);">
-            <i class="fa-solid fa-house-chimney"></i> <strong>17:30:</strong> הגעה לדירה ברזלוג / בנסקו והתארגנות.
-        </div>
+        <details>
+            <summary>17:30 | הגעה לדירה בבנסקו</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-house-chimney"></i><div>הגעה לדירה ברזלוג / בנסקו (Nayden Gerov 42) והתארגנות.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=41.8265864,23.488446" target="_blank">ניווט לדירה בבנסקו</a></div></div>
+            </div>
+        </details>
 
         <details>
             <summary>18:00 | קניות והשלמות</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-cart-shopping"></i><div>קניות בסופרמרקט Lidl.</div></div>
+                <div class="info-row"><i class="fa-solid fa-cart-shopping"></i><div>קניות בסופרמרקט Lidl להצטיידות.</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Lidl+Razlog" target="_blank">ניווט ל-Lidl Razlog</a></div></div>
             </div>
         </details>
@@ -285,9 +291,12 @@
             </div>
         </details>
 
-        <div class="info-box-inline" style="margin-bottom: 0;">
-            <i class="fa-solid fa-moon"></i> <strong>21:00:</strong> לילה טוב!
-        </div>
+        <details>
+            <summary>21:00 | לילה טוב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-moon"></i><div>זמן לישון ולאגור כוחות למחר.</div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Day 2 -->
@@ -299,7 +308,9 @@
         <details>
             <summary>10:30 | טרקטורונים ב-Не се отказвай</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-truck-monster"></i><div>חוויית אקסטרים בשטח! (החל מ-120₪ לחצי שעה). מומלץ לתאם מראש.</div></div>
+                <div class="info-row"><i class="fa-solid fa-truck-monster"></i><div>חוויית אקסטרים בשטח! (מומלץ לתאם מראש).</div></div>
+                <div class="info-row"><i class="fa-solid fa-shekel-sign"></i><div>עלות: החל מ-120₪ לחצי שעה.</div></div>
+                <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>לתיאום:</strong> <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="whatsapp-link">שלחו הודעה בוואטסאפ</a> (יש להחליף מספר בקוד)</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=ATV+Bansko+Не+се+отказвай" target="_blank">ניווט לטרקטורונים</a></div></div>
             </div>
         </details>
@@ -315,18 +326,34 @@
         <details>
             <summary>13:00 - 16:00 | רכבל ואגם בזבוג</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-cable-car"></i><div><strong>13:00:</strong> עלייה ברכבל לאגם (כ-70₪ לאדם).</div></div>
+                <div class="info-row"><i class="fa-solid fa-cable-car"></i><div><strong>13:00:</strong> עלייה ברכבל לאגם. עלות כ-70₪ לאדם.</div></div>
                 <div class="info-row"><i class="fa-solid fa-basket-shopping"></i><div><strong>13:45:</strong> פיקניק ארוחת צהריים מול אגם בזבוג המרהיב.</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Bezbog+Lake" target="_blank">ניווט לאגם בזבוג</a></div></div>
                 <div class="info-row"><i class="fa-solid fa-arrow-down"></i><div><strong>16:00:</strong> ירידה ברכבל חזרה.</div></div>
             </div>
         </details>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-green); margin-bottom: 0;">
-            <i class="fa-solid fa-person-walking"></i> <strong>17:00:</strong> טיול קליל בבנסקו (אופציונלי).<br>
-            <i class="fa-solid fa-utensils"></i> <strong>19:00:</strong> ארוחת ערב בדירה.<br>
-            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
-        </div>
+        <details>
+            <summary>17:00 | טיול קליל בבנסקו (אופציונלי)</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-person-walking"></i><div>הליכה נעימה ורגועה ברחובות העיר.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Bansko+Old+Town" target="_blank">ניווט לעיר העתיקה בבנסקו</a></div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>19:00 | ארוחת ערב בדירה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-utensils"></i><div>ארוחת ערב משפחתית בדירה בבנסקו.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>21:30 | לילה טוב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-moon"></i><div>זמן לנוח.</div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Day 3 -->
@@ -347,16 +374,25 @@
             <summary>14:00 | רפטינג בנהר סטרומה!</summary>
             <div class="details-content">
                 <div class="info-row"><i class="fa-solid fa-ship"></i><div>רפטינג סוער ב-Reflip. כ-2.5 שעות במים. חובה לתאם מראש!</div></div>
-                <div class="info-row"><i class="fa-solid fa-euro-sign"></i><div>40€ לאדם.</div></div>
-                <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>לתיאום:</strong> <a href="https://wa.me/" target="_blank" class="whatsapp-link">שלחו הודעה בוואטסאפ</a></div></div>
+                <div class="info-row"><i class="fa-solid fa-euro-sign"></i><div>עלות: 40€ לאדם.</div></div>
+                <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>לתיאום:</strong> <a href="https://wa.me/3598707505991" target="_blank" class="whatsapp-link">שלחו הודעה בוואטסאפ</a></div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Reflip+Rafting+Struma" target="_blank">ניווט לרפטינג</a></div></div>
             </div>
         </details>
 
-        <div class="info-box-inline" style="margin-bottom: 0;">
-            <i class="fa-solid fa-house"></i> <strong>19:00:</strong> חזרה לדירה, התאוששות וארוחת ערב.<br>
-            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
-        </div>
+        <details>
+            <summary>19:00 | חזרה לדירה וארוחת ערב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-house"></i><div>חזרה לדירה בבנסקו להתאוששות מאדרנלין המים ולארוחת ערב.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>21:30 | לילה טוב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-moon"></i><div>לילה טוב!</div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Day 4 -->
@@ -368,7 +404,8 @@
         <details>
             <summary>10:30 | Rila Fun Park</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-face-smile-wink"></i><div>מגלשות הרים ונדנדת אקסטרים! (10 לבה למגלשה | 12 לבה לנדנדה, עד 110 ק"ג).</div></div>
+                <div class="info-row"><i class="fa-solid fa-face-smile-wink"></i><div>מגלשות הרים ונדנדת אקסטרים!</div></div>
+                <div class="info-row"><i class="fa-solid fa-tag"></i><div>עלויות: 10 לבה למגלשה | 12 לבה לנדנדה (עד 110 ק"ג).</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Rila+Fun+Park" target="_blank">ניווט לפארק המגלשות</a></div></div>
             </div>
         </details>
@@ -376,7 +413,8 @@
         <details>
             <summary>13:00 | פארק הדובים Belitsa (אופציונלי)</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-paw"></i><div>ביקור בשמורת הדובים (כניסה כ-5 יורו).</div></div>
+                <div class="info-row"><i class="fa-solid fa-paw"></i><div>ביקור בשמורת הדובים.</div></div>
+                <div class="info-row"><i class="fa-solid fa-euro-sign"></i><div>עלות כניסה: כ-5 יורו לאדם.</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Dancing+Bears+Park+Belitsa" target="_blank">ניווט לפארק הדובים</a></div></div>
             </div>
         </details>
@@ -384,16 +422,33 @@
         <details>
             <summary>14:00 | אגם Rila Fish</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-fish"></i><div>פיקניק ארוחת צהריים / דיג במקום (אופציונלי, כניסה חופשית).</div></div>
+                <div class="info-row"><i class="fa-solid fa-fish"></i><div>פיקניק ארוחת צהריים או דיג במקום (אופציונלי).</div></div>
+                <div class="info-row"><i class="fa-solid fa-tag"></i><div>כניסה חופשית למתחם האגם.</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Rila+Fish" target="_blank">ניווט לאגם הדגים</a></div></div>
             </div>
         </details>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-brown); margin-bottom: 0;">
-            <i class="fa-solid fa-person-hiking"></i> <strong>16:00:</strong> סיור קליל ב<a href="https://www.google.com/maps/search/?api=1&query=Bansko+forest+trail" target="_blank">שביל היער בנסקו</a>.<br>
-            <i class="fa-solid fa-house"></i> <strong>19:00:</strong> חזרה לדירה.<br>
-            <i class="fa-solid fa-moon"></i> <strong>21:30:</strong> לילה טוב.
-        </div>
+        <details>
+            <summary>16:00 | סיור קליל בשביל היער בנסקו</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-person-hiking"></i><div>הליכה נעימה בשביל היער.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Bansko+forest+trail" target="_blank">ניווט לשביל היער</a></div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>19:00 | חזרה לדירה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-house"></i><div>חזרה לדירה בבנסקו ומנוחה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>21:30 | לילה טוב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-moon"></i><div>לילה טוב וחלומות פז!</div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Day 5 -->
@@ -402,10 +457,19 @@
             <h2 class="day-title">יום חמישי – סופיה ושופינג רגוע</h2>
         </div>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-turquoise);">
-            <i class="fa-solid fa-car"></i> <strong>11:00:</strong> יציאה לכיוון סופיה.<br>
-            <i class="fa-solid fa-city"></i> <strong>13:00:</strong> הגעה לעיר הבירה.
-        </div>
+        <details>
+            <summary>11:00 | יציאה לסופיה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-car"></i><div>יציאה מהדירה בבנסקו לנסיעה צפונה לכיוון סופיה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>13:00 | הגעה לסופיה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-city"></i><div>הגעה לעיר הבירה של בולגריה.</div></div>
+            </div>
+        </details>
 
         <details>
             <summary>15:00 | זמן שופינג!</summary>
@@ -415,10 +479,20 @@
             </div>
         </details>
 
-        <div class="info-box-inline" style="border-right: 4px solid var(--primary-green); margin-bottom: 0;">
-            <i class="fa-solid fa-utensils"></i> <strong>19:00:</strong> מסעדה כשרה / ארוחת ערב.<br>
-            <i class="fa-solid fa-bed"></i> <strong>21:00:</strong> לילה טוב בדירה ליד השדה.
-        </div>
+        <details>
+            <summary>19:00 | מסעדה כשרה וארוחת ערב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-utensils"></i><div>ארוחת ערב אחרונה לטיול במסעדה כשרה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>21:00 | לילה טוב בדירה ליד השדה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-bed"></i><div>התמקמות בדירה האחרונה לטיול, ממש קרוב לשדה התעופה.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=42.6976308,23.3492676" target="_blank">ניווט לדירה בסופיה (Aleko Konstantinov 42)</a></div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Day 6 -->
@@ -426,10 +500,21 @@
         <div class="day-header">
             <h2 class="day-title">יום שישי – חזרה הביתה</h2>
         </div>
-        <div class="info-box-inline" style="margin-bottom: 0;">
-            <i class="fa-solid fa-plane-departure"></i> <strong>03:00:</strong> יציאה לשדה התעופה של סופיה.<br>
-            <i class="fa-solid fa-home"></i> <strong>06:45:</strong> טיסה לישראל - חוזרים הביתה בשמחה!
-        </div>
+        
+        <details>
+            <summary>03:00 | יציאה לשדה התעופה סופיה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-plane-departure"></i><div>השכמה מוקדמת ויציאה לכיוון שדה התעופה והחזרת הרכב.</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Sofia+Airport" target="_blank">ניווט לשדה התעופה</a></div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary>06:45 | טיסה לישראל</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-home"></i><div>המראה חזרה לארץ. טיסה נעימה!</div></div>
+            </div>
+        </details>
     </div>
 
     <!-- Option B -->
@@ -439,22 +524,50 @@
         </div>
         
         <details>
-            <summary style="color: #e65100;">יום 3 | טרק שבעת האגמים</summary>
+            <summary style="color: #e65100;">יום 3 | 07:30 - יציאה לטרק שבעת האגמים</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div><strong>07:30:</strong> לצאת לדרך, נסיעה של כשעתיים ורבע. עליה ברכבל שבעת האגמים (כ-65₪ לאחד).</div></div>
-                <div class="info-row"><i class="fa-solid fa-mountain" style="color:#ff9800"></i><div><strong>10:00 - 16:00:</strong> הליכה במסלול האדום עד אגם מס' 5 (אפשר עד 7 וחזרה). ארוחת צהריים בשטח.</div></div>
-                <div class="info-row"><i class="fa-solid fa-circle-exclamation" style="color:#ff9800"></i><div><strong>חשוב!</strong> לבדוק בתחילת המסלול שעת ירידה אחרונה ברכבל. למיטיבי לכת: המשך למסלול הצהוב (כ-3 שעות).</div></div>
+                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div>נסיעה של כשעתיים ורבע אל הרכבל.</div></div>
+                <div class="info-row"><i class="fa-solid fa-cable-car" style="color:#ff9800"></i><div>עליה ברכבל שבעת האגמים (כ-65₪ לאחד).</div></div>
                 <div class="info-row"><i class="fa-solid fa-location-dot" style="color:#ff9800"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Seven+Rila+Lakes+Cable+Car" target="_blank" style="color: #e65100;">ניווט לרכבל האגמים</a></div></div>
-                <div class="info-row"><i class="fa-solid fa-house" style="color:#ff9800"></i><div><strong>18:30:</strong> חזרה לדירה.</div></div>
             </div>
         </details>
 
         <details>
-            <summary style="color: #e65100;">יום 5 | רפטינג + שופינג</summary>
+            <summary style="color: #e65100;">יום 3 | 10:00 - 16:00 - מסלול האגמים</summary>
             <div class="details-content">
-                <div class="info-row"><i class="fa-solid fa-water" style="color:#ff9800"></i><div><strong>09:30:</strong> רפטינג ב-Reflip בנהר סטרומה (40€, 2.5 שעות).</div></div>
-                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div><strong>12:30:</strong> יציאה לסופיה.</div></div>
-                <div class="info-row"><i class="fa-solid fa-bag-shopping" style="color:#ff9800"></i><div><strong>15:30 - 18:30:</strong> קניון.</div></div>
+                <div class="info-row"><i class="fa-solid fa-mountain" style="color:#ff9800"></i><div>הליכה במסלול האדום עד אגם מס' 5 (ניתן לעלות לאגם 6+7 ולחזור חזרה). ירידה מומלצת: חזרה דרך המסלול האדום.</div></div>
+                <div class="info-row"><i class="fa-solid fa-basket-shopping" style="color:#ff9800"></i><div>פיקניק ארוחת צהריים בשטח.</div></div>
+                <div class="info-row"><i class="fa-solid fa-person-hiking" style="color:#ff9800"></i><div><strong>למיטיבי לכת:</strong> להמשיך על המסלול הצהוב (לוקח כ-3 שעות עד לתחנת הרכבל).</div></div>
+                <div class="info-row"><i class="fa-solid fa-circle-exclamation" style="color:#ff9800"></i><div><strong>חשוב!</strong> לבדוק בתחילת המסלול שעת ירידה אחרונה ברכבל.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary style="color: #e65100;">יום 3 | 18:30 - חזרה לדירה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-house" style="color:#ff9800"></i><div>חזרה לדירה ומנוחה אחרי יום ארוך.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary style="color: #e65100;">יום 5 | 09:30 - רפטינג</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-water" style="color:#ff9800"></i><div>רפטינג ב-Reflip בנהר סטרומה (40€ לאדם, כ-2.5 שעות במים).</div></div>
+                <div class="info-row"><i class="fa-solid fa-location-dot" style="color:#ff9800"></i><div><a href="https://www.google.com/maps/search/?api=1&query=Reflip+Rafting+Struma" target="_blank" style="color: #e65100;">ניווט לרפטינג</a></div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary style="color: #e65100;">יום 5 | 12:30 - יציאה לסופיה</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-car" style="color:#ff9800"></i><div>נסיעה צפונה לעבר עיר הבירה סופיה.</div></div>
+            </div>
+        </details>
+
+        <details>
+            <summary style="color: #e65100;">יום 5 | 15:30 - 18:30 - שופינג וארוחת ערב</summary>
+            <div class="details-content">
+                <div class="info-row"><i class="fa-solid fa-bag-shopping" style="color:#ff9800"></i><div>קניות באחד מהקניונים בסופיה.</div></div>
                 <div class="info-row"><i class="fa-solid fa-utensils" style="color:#ff9800"></i><div>מסעדה כשרה / ארוחת ערב.</div></div>
             </div>
         </details>
@@ -495,9 +608,7 @@
                 <li><strong>להביא:</strong> נעלי הליכה, בגדי ים, מים, קרם הגנה</li>
                 <li><strong>לשמור עותק בנייד:</strong> לשימוש נוח בשטח</li>
             </ul>
-            <div style="text-align: center; margin-top: 10px; font-weight: bold; color: var(--primary-green);">שיהיה טיול מלא חוויות, טבע, צחוק וזיכרונות טובים!</div>
-        </div>
-    </div>
+             </div>
 
     <!-- Footer -->
     <div class="footer">
